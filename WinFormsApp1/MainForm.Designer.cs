@@ -341,7 +341,7 @@
             Controls.Add(AddNewEmployee);
             Controls.Add(MainDataGridView);
             Name = "MainForm";
-            Text = "Form1";
+            Text = "MainForm";
             Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)MainDataGridView).EndInit();
             groupBox1.ResumeLayout(false);

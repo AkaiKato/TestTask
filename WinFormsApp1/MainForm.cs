@@ -192,11 +192,11 @@ namespace WinFormsApp1
             if (!selFlag)
                 return;
 
-            if((int)DivisionComboBox.SelectedValue == 0)
+            if ((int)DivisionComboBox.SelectedValue == 0)
             {
                 ResetBtn.PerformClick();
                 return;
-            }    
+            }
 
             EmployeesTableHeders();
             var list = employeesTableWork.GetAllDivisionEmployees((int)DivisionComboBox.SelectedValue);
@@ -303,7 +303,7 @@ namespace WinFormsApp1
 
             var range = ws.UsedRange;
 
-            for (int i = 2; i < range.Rows.Count+1; i++)
+            for (int i = 2; i < range.Rows.Count + 1; i++)
             {
                 if (ws.Cells[2][i].Value == null)
                     continue;
@@ -320,7 +320,7 @@ namespace WinFormsApp1
                 if (ws.Cells[3][i].Value == null)
                     continue;
 
-                var div = divisionTableWork.GetDivisionById(i-1);
+                var div = divisionTableWork.GetDivisionById(i - 1);
 
                 div.HeadDivision = divisionTableWork.GetDivisionByName(ws.Cells[3][i].Value);
 
